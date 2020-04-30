@@ -1,3 +1,43 @@
-<p>
-  add-discount works!
-</p>
+<p>{{title}}</p>
+<!-- <app-management-nav></app-management-nav> -->
+<div class="container">
+  <div class="row clearfix">
+      <div class="col-md-12 column">
+          <div class="row clearfix">
+              <div class="col-md-2 column">
+              </div>
+              <div class="col-md-8 column">
+                  <form role="form">
+                      <div class="form-group">
+                          <label for="discountid">Discount ID</label><input type="text" class="form-control"
+                              id="discountid" [(ngModel)]="discount.discountid" name="discountid" />
+                      </div> 
+                      <div class="form-group">
+                          <label for="code">Code</label><input type="text" class="form-control"
+                              id="code" [(ngModel)]="discount.code" name="code" />
+                      </div>
+                      <div class="form-group">
+                          <label for="percentage">Percentage</label><input type="text" class="form-control"
+                              id="percentage" [(ngModel)]="discount.percentage" name="percentage" />
+                      </div>
+                      <div class="form-group">
+                          <label for="startdate">Strat date</label><input type="text" class="form-control"
+                              id="startdate" [(ngModel)]="discount.startdate" name="startdate" />
+                      </div>
+                      <div class="form-group">
+                        <label for="enddate">End date</label><input type="text" class="form-control"
+                            id="enddate" [(ngModel)]="discount.enddate" name="enddate" />
+                    </div>
+                     
+
+                      <button type="submit" class="btn btn-secondary" (click)="saveDiscount()">Save</button>
+
+
+                  </form>
+              </div>
+              <div class="col-md-2 column">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

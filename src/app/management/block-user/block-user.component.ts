@@ -1,3 +1,4 @@
+import { User } from './../../model/user';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./block-user.component.css']
 })
 export class BlockUserComponent implements OnInit {
-
+  user: User;
+  userList: User[];
   constructor() { }
 
   ngOnInit() {
+  }
+
+  unblockuser(): void{
+    console.log('User Unblocked:' + this.user);
+  }
+
+  blockuser(): void{
+    console.log('User blocked:' + this.user);
   }
 
 }

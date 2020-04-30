@@ -1,6 +1,8 @@
+import { Router } from '@angular/router';
 import { ItemService } from './../../service/item.service';
 import { Component, OnInit } from '@angular/core';
 import { Item } from './../../model/Item';
+
 
 
 
@@ -14,13 +16,15 @@ export class AddItemComponent implements OnInit {
   title = 'Add an item';
   item: Item;
 
-  constructor(private itemService: ItemService) { }
+  constructor(private itemService: ItemService,
+              private router: Router ) { }
 
   ngOnInit() {
     }
 
     saveItem() {
       console.log('create stock exchange: ', this.item);
+      this.router.navigate(['/itemlist']);
     }
 
   }

@@ -1,3 +1,5 @@
+import { BlockItemComponent } from './management/block-item/block-item.component';
+import { BlockUserComponent } from './management/block-user/block-user.component';
 import { AddDiscountComponent } from './management/add-discount/add-discount.component';
 import { AddCategoryComponent } from './management/add-category/add-category.component';
 import { SearchCatrgoryComponent } from './management/search-catrgory/search-catrgory.component';
@@ -41,7 +43,9 @@ import { PurhistoryComponent } from './purhistory/purhistory.component';
       SearchCatrgoryComponent,
       AddCategoryComponent,
       AddDiscountComponent,
-      ShowDiscountComponent
+      ShowDiscountComponent,
+      BlockUserComponent,
+      BlockItemComponent
    ],
    imports: [
       BrowserModule,

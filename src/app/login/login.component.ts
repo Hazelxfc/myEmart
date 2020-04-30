@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     if (this.user.type === 1 || this.user.type === 2){
           this.router.navigate(['/itemlist']);
     }else{
-      this.router.navigate(['/itemlist']);
+      this.router.navigate(['/adminlanding']);
     }
 
   }

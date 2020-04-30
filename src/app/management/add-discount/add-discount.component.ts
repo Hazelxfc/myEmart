@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { Discount } from './../../model/discount';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-discount.component.css']
 })
 export class AddDiscountComponent implements OnInit {
-
-  constructor() { }
+ title = 'Add Discount';
+ discount: Discount;
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  saveDiscount(): void {
+    this.router.navigate(['/showdiscount']);
+
   }
 
 }

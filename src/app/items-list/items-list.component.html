@@ -39,8 +39,7 @@
       <th scope="col">Item picture</th>
       <th scope="col">Item name</th>
       <th scope="col">Item Price</th>
-      <th scope="col">seller</th>
-      <th scope="col">action</th>
+      <th scope="col">seller</th> 
     </tr>
     </thead>
     <tbody>
@@ -49,10 +48,7 @@
       <td><img [src]="item.imageUrl" class="mr-2" style="width: 70px"> </td>
       <td><ngb-highlight [result]="item.name"  ></ngb-highlight></td> 
       <td><ngb-highlight [result]="item.price"  ></ngb-highlight></td>
-      <td><ngb-highlight [result]="item.seller"  ></ngb-highlight></td>
-      <!-- admin block/unblock item  -->
-      <td><button type="button" class="btn btn-sm btn-outline-secondary" (click)="blockItem(item)">block Item </button></td> 
-      <td><button type="button" class="btn btn-sm btn-outline-secondary" (click)="unblockItem(item)">unblock Item </button></td> 
+      <td><ngb-highlight [result]="item.seller"  ></ngb-highlight></td> 
       <td><a [routerLink]="['/detail', item.id]">View Detail</a> </td>
     </tr>
     </tbody>

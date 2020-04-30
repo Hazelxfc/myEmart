@@ -1,3 +1,5 @@
+import { ManagementNavComponent } from './management/management-nav/management-nav.component';
+import { BlockItemComponent } from './management/block-item/block-item.component';
 import { BlockUserComponent } from './management/block-user/block-user.component';
 import { AddDiscountComponent } from './management/add-discount/add-discount.component';
 import { SearchCatrgoryComponent } from './management/search-catrgory/search-catrgory.component';
@@ -14,20 +16,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'signup', component : SignupComponent },
   { path: 'login', component : LoginComponent },
   { path: 'itemlist', component : ItemsListComponent },
   { path: 'history', component : PurhistoryComponent },
-  { path: 'discount', component : ShowDiscountComponent },
   { path: 'cart', component : CartComponent },
   { path: 'detail/:id', component  : ItemDetailComponent},
-
+  { path: 'category', component  : SearchCatrgoryComponent },
   { path: 'additem', component : AddItemComponent },
   { path: 'blockuser', component : BlockUserComponent },
+  { path: 'blockItem', component : BlockItemComponent },
   { path: 'addcategory', component  : AddCategoryComponent },
   { path: 'searchcategory', component  : SearchCatrgoryComponent },
   { path: 'adddiscount', component  : AddDiscountComponent },
-  { path: 'showdiscount', component  : SearchCatrgoryComponent }
+  { path: 'showdiscount', component  : ShowDiscountComponent },
+  { path: 'adminlanding', component : ManagementNavComponent}
 
 ];
 

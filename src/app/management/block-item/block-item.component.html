@@ -1,0 +1,41 @@
+<div class="container">
+  <!-- <app-management-nav></app-management-nav> -->
+
+  <div class="row">
+    <div class="form-group form-inline text-center">
+      <input type="text" class="form-control ml-2" type="text" placeholder="itemName/itemid" >
+      <div class="input-group-append md-3">
+        <button type="submit" class="btn btn-secondary">Search</button>
+      </div>
+     </div>
+  </div>
+      
+  <table class="table table-striped">
+    <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Item Id</th>
+    <th scope="col">Category</th>
+    <th scope="col">Subcategory</th> 
+    <th scope="col">name</th> 
+    <th scope="col">Price</th>
+    <th scope="col">stocknumber</th>
+    <th scope="col">Active?</th> 
+    <th scope="col">Action</th> 
+  </tr>
+  </thead>
+  <tbody> 
+  <tr *ngFor="let item of itemList;index as i">
+    <th scope="row">{{ i + 1 }}</th> 
+    <td><ngb-highlight [result]="item.category"></ngb-highlight></td>
+    <td><ngb-highlight [result]="item.subcategory"></ngb-highlight></td> 
+    <td><ngb-highlight [result]="item.name"></ngb-highlight></td> 
+    <td><ngb-highlight [result]="item.price"></ngb-highlight></td>
+    <td><ngb-highlight [result]="item.stocknumber"></ngb-highlight></td> 
+    <td><ngb-highlight [result]="item.active"></ngb-highlight></td>  
+     <td *ngif="item.active===false"><button type="button" class="btn btn-sm btn-secondary" (click)="unblockItem()">UnBlock </button></td>   
+     <td *ngif="item.active===true"><button type="button" class="btn btn-sm btn-secondary" (click)="blockItem()">Block </button></td> 
+    </tr>
+  </tbody>
+</table>  
+</div>

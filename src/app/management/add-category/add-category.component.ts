@@ -16,7 +16,7 @@ export class AddCategoryComponent implements OnInit {
   }
 
   saveCategory(): void{
-    this.router.navigate(['/addcategory']);
+    this.router.navigate(['/category']);
   }
 
 }
