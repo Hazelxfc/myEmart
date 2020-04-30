@@ -1,0 +1,67 @@
+<div class="container">
+    <app-nargate></app-nargate>
+    <div class="row"> 
+        <div class="col-md-3">
+         <!-- <app-filter></app-filter> -->
+         <div class="card filter">
+
+            <div class="card-header">
+              <strong>Filter</strong>
+            </div>
+          
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="from">PriceFrom</label>
+                  <input type="number" id="from" class="form-control">
+                </div>
+          
+                <div class="form-group">
+                  <label for="to">Price To</label>
+                  <input type="number" id="to" class="form-control">
+                </div>
+          
+                <button class="btn btn-primary btn-block btn-sm">Filter</button>
+              </form>
+            </div>
+          </div>
+
+          
+        </div>
+  
+        <div class="col-md-9"> 
+              <!-- <app-item-detail *ngFor="let item of itemList" [item] = "item"></app-item-detail>   -->
+              
+    <table class="table table-striped">
+      <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Item picture</th>
+      <th scope="col">Item name</th>
+      <th scope="col">Item Price</th>
+      <th scope="col">seller</th>
+      <th scope="col">action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item  of itemList;index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td><img [src]="item.imageUrl" class="mr-2" style="width: 70px"> </td>
+      <td><ngb-highlight [result]="item.name"  ></ngb-highlight></td> 
+      <td><ngb-highlight [result]="item.price"  ></ngb-highlight></td>
+      <td><ngb-highlight [result]="item.seller"  ></ngb-highlight></td>
+      <!-- admin block/unblock item  -->
+      <td><button type="button" class="btn btn-sm btn-outline-secondary" (click)="blockItem(item)">block Item </button></td> 
+      <td><button type="button" class="btn btn-sm btn-outline-secondary" (click)="unblockItem(item)">unblock Item </button></td> 
+      <td><a [routerLink]="['/detail', item.id]">View Detail</a> </td>
+    </tr>
+    </tbody>
+  </table>
+ 
+
+  
+
+      </div>
+   </div>
+ 
+</div>

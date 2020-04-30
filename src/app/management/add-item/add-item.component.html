@@ -1,0 +1,47 @@
+<p>{{title}}</p>
+<app-management-nav></app-management-nav>
+<div class="container">
+  <div class="row clearfix">
+      <div class="col-md-12 column">
+          <div class="row clearfix">
+              <div class="col-md-2 column">
+              </div>
+              <div class="col-md-8 column">
+                  <form role="form">
+                      <div class="form-group">
+                          <label for="category">Category</label><input type="text" class="form-control"
+                              id="category" [(ngModel)]="item.category" name="category" />
+                      </div>
+                      <div class="form-group">
+                          <label for="subCategory">SubCategory</label><input type="text" class="form-control"
+                              id="subCategory" [(ngModel)]="item.subcategory" name="subCategory" />
+                      </div>
+                      <div class="form-group">
+                          <label for="name">Item Name</label><input type="text" class="form-control"
+                              id="name" [(ngModel)]="item.name" name="name" />
+                      </div>
+                      <div class="form-group">
+                          <label for="price">Price</label><input type="text" class="form-control"
+                              id="price" [(ngModel)]="item.price" name="price" />
+                      </div>
+                      <div class="form-group">
+                        <label for="num">Num.of Count</label><input type="text" class="form-control"
+                            id="num" [(ngModel)]="item.stocknumber" name="num" />
+                    </div>
+                    <div class="form-group">
+                      <label for="remarks">Remarks</label><input type="text" class="form-control"
+                          id="remarks" [(ngModel)]="item.remarks" name="remarks" />
+                  </div>
+
+
+                      <button type="submit" class="btn btn-default" (click)="saveItem()">Save</button>
+
+
+                  </form>
+              </div>
+              <div class="col-md-2 column">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

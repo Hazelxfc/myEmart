@@ -1,0 +1,40 @@
+<div class="container">
+  <app-management-nav></app-management-nav>
+
+  <div class="row">
+    <div class="form-group form-inline text-center">
+      <input type="text" class="form-control ml-2" type="text" placeholder="category" >
+      <div class="input-group-append md-3">
+        <button type="submit" class="btn btn-secondary">Search</button>
+      </div>
+     </div>
+  </div>
+  
+            
+  <table class="table table-striped">
+    <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Dicsount Id</th>
+    <th scope="col">Discount code</th>
+    <th scope="col">Percentage</th>
+    <th scope="col">Start date</th>
+    <th scope="col">End date</th> 
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let discount of discountList;index as i">
+    <th scope="row">{{ i + 1 }}</th> 
+    <td><ngb-highlight [result]="discount.id"  ></ngb-highlight></td>
+    <td><ngb-highlight [result]="discount.name"  ></ngb-highlight></td> 
+    <td><ngb-highlight [result]="discount.detail"  ></ngb-highlight></td> 
+   <td><button type="button" class="btn btn-sm btn-outline-secondary" (click)="updateDiscount()">Update Discount </button></td>   
+  </tr>
+  </tbody>
+</table> 
+
+<div class="row">
+  <button type="button" class="btn btn-sm btn-outline-secondary" (click)="addDiscount()">Add discount  </button>
+</div>
+
+</div>

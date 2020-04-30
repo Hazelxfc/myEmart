@@ -1,0 +1,50 @@
+ 
+  <div class="container"> 
+    <app-nargate></app-nargate>
+  
+   <!-- <div class="row" *ngFor="let i of [1,2,3,4]" >
+     <app-cart-item></app-cart-item>
+   </div>   -->
+   <div class="col-12 content-center">
+    <h1>My Cart</h1>
+  </div>
+   <table class="table table-striped  mt-3">
+    <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Item picture</th>
+    <th scope="col">Item name</th>
+    <th scope="col">Item Price</th>
+    <th scope="col">count</th>
+    <th scope="col">action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let cartitem of cartitemList;index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td><img [src]="cartitem.imageUrl" class="mr-2" style="width: 70px"> </td>
+    <td><ngb-highlight [result]="cartitem.name"></ngb-highlight></td> 
+    <td><ngb-highlight [result]="cartitem.price"></ngb-highlight></td> 
+    <td> <input type="number" id="to" class="form-control"></td>
+    <td><button type="button" class="btn btn-sm btn-outline-primary" (click)="deleteFromCart()">delete</button></td>
+  </tr>
+  </tbody>
+</table>
+
+  <div class="row mt-3">
+    <li class="list-group-item d-flex justify-content-between">
+    <span> <strong>Total Price :</strong></span>
+    <strong>{{getTotal()+''}}</strong>
+    </li>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center mt-3">
+   <div class="btn-group"> 
+    <button type="submit" class="btn btn-secondary" style="margin:8px" (click)="viewDiscount()">Apply Discount</button> 
+    <button type="submit" class="btn btn-secondary" style="margin:8px" (click)="checkOut()">Continue to Check out</button> 
+    <button type="submit" class="btn btn-secondary" style="margin:8px" (click)="backToSearch()">Back to search</button>
+   </div>
+  </div> 
+  
+ 
+</div>

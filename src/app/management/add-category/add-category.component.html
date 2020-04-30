@@ -1,0 +1,34 @@
+<p>{{title}}</p>
+<app-management-nav></app-management-nav>
+<div class="container">
+  <div class="row clearfix">
+      <div class="col-md-12 column">
+          <div class="row clearfix">
+              <div class="col-md-2 column">
+              </div>
+              <div class="col-md-8 column">
+                  <form role="form">
+                      <div class="form-group">
+                          <label for="categoryid">Category</label><input type="text" class="form-control"
+                              id="categoryid" [(ngModel)]="category.id" name="categoryid" />
+                      </div> 
+                      <div class="form-group">
+                          <label for="name">Item Name</label><input type="text" class="form-control"
+                              id="name" [(ngModel)]="category.categoryname" name="categoryname" />
+                      </div>
+                      <div class="form-group">
+                          <label for="detail">Price</label><input type="text" class="form-control"
+                              id="detail" [(ngModel)]="category.detail" name="detail" />
+                      </div> 
+
+                      <button type="submit" class="btn btn-default" (click)="saveCategory()">Save</button>
+
+
+                  </form>
+              </div>
+              <div class="col-md-2 column">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
