@@ -23,7 +23,7 @@ export class AddItemComponent implements OnInit {
     }
 
     saveItem() {
-      console.log('create stock exchange: ', this.item);
+      this.itemService.addItem(this.item);
       this.router.navigate(['/itemlist']);
     }
 

@@ -33,8 +33,8 @@
     <td><ngb-highlight [result]="item.price"></ngb-highlight></td>
     <td><ngb-highlight [result]="item.stocknumber"></ngb-highlight></td> 
     <td><ngb-highlight [result]="item.active"></ngb-highlight></td>  
-     <td *ngif="item.active===false"><button type="button" class="btn btn-sm btn-secondary" (click)="unblockItem()">UnBlock </button></td>   
-     <td *ngif="item.active===true"><button type="button" class="btn btn-sm btn-secondary" (click)="blockItem()">Block </button></td> 
+     <td *ngif="item.active===false"><button type="button" class="btn btn-sm btn-secondary" (click)="unblockItem(item)">UnBlock </button></td>   
+     <td *ngif="item.active===true"><button type="button" class="btn btn-sm btn-secondary" (click)="blockItem(item)">Block </button></td> 
     </tr>
   </tbody>
 </table>  
